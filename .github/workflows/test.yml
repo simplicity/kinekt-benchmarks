@@ -20,9 +20,9 @@ jobs:
 
       - name: Run servers
         run: |
-          deno run --allow-read --allow-env --allow-net --watch expressjs/index.ts && \
-          deno run --allow-read --allow-env --allow-net --watch fastify/index.ts && \
-          deno run --allow-read --allow-env --allow-net --watch kinekt/index.ts && \
+          deno run --allow-read --allow-env --allow-net --watch expressjs/index.ts & \
+          deno run --allow-read --allow-env --allow-net --watch fastify/index.ts & \
+          deno run --allow-read --allow-env --allow-net --watch kinekt/index.ts & \
           deno run --allow-read --allow-env --allow-net --watch oak/index.ts
 
       - name: Run tests
