@@ -18,5 +18,12 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: Run servers
+        script: |
+          deno run --allow-read --allow-env --allow-net --watch expressjs/index.ts && \
+          deno run --allow-read --allow-env --allow-net --watch fastify/index.ts && \
+          deno run --allow-read --allow-env --allow-net --watch kinekt/index.ts && \
+          deno run --allow-read --allow-env --allow-net --watch oak/index.ts
+
       - name: Run tests
         run: deno test benchmark.test.ts
