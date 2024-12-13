@@ -26,4 +26,4 @@ jobs:
           deno run --allow-read --allow-env --allow-net --watch oak/index.ts &
 
       - name: Run tests
-        run: deno test benchmark.test.ts
+        run: deno test --allow-net benchmark.test.ts
