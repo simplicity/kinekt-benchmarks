@@ -23,7 +23,7 @@ async function runBenchmark(port: number) {
   return end - start;
 }
 
-Deno.test("benchmark", async () => {
+Deno.test("benchmarks", async () => {
   const benchmarks = [
     { framework: "oak", port: 3001 },
     { framework: "fastify", port: 3003 },

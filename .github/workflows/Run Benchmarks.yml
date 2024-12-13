@@ -25,5 +25,5 @@ jobs:
           deno run --allow-read --allow-env --allow-net --watch kinekt/index.ts & \
           deno run --allow-read --allow-env --allow-net --watch oak/index.ts &
 
-      - name: Run tests
+      - name: Run benchmarks
         run: deno test --allow-net benchmark.test.ts
