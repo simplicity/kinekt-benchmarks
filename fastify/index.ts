@@ -4,7 +4,7 @@ import { range } from "../range.ts";
 
 const fastify = Fastify();
 
-await fastify.register(cors);
+fastify.register(cors);
 
 range.forEach((index1) => {
   range.forEach((index2) => {
