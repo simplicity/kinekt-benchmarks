@@ -35,6 +35,15 @@ async function run() {
   const results: { framework: string; averageSpeed: number }[] = [];
 
   for (const item of benchmarks) {
+    try {
+      await runBenchmark(item.port);
+    } catch {
+      console.log(
+        `Unable to reach ${item.framework} at port ${item.port} - skipping`
+      );
+      continue;
+    }
+
     let total = 0;
 
     for (let index = 0; index < numberOfRuns; index++) {
