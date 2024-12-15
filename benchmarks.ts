@@ -5,7 +5,7 @@ async function runBenchmark(port: number) {
     headers: { "Content-Type": "application/json" },
   };
 
-  const target = 12;
+  const target = 49;
 
   const start = performance.now();
   const result = await fetch(
