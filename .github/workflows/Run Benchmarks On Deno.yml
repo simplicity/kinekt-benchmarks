@@ -20,6 +20,7 @@ jobs:
 
       - name: Run servers
         run: |
+          export DENO_NO_PACKAGE_JSON=1
           deno run --allow-read --allow-env --allow-net expressjs/index.ts & \
           deno run --allow-read --allow-env --allow-net fastify/index.ts & \
           deno run --allow-read --allow-env --allow-net kinekt/index.ts & \

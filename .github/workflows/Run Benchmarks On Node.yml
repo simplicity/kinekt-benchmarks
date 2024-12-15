@@ -30,7 +30,6 @@ jobs:
           npx ts-node expressjs/index.ts & \
           npx ts-node fastify/index.ts & \
           npx ts-node kinekt/index.ts & \
-          npx ts-node oak/index.ts &
 
       - name: Run benchmarks
         run: npx ts-node benchmarks.ts
