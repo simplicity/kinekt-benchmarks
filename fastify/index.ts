@@ -1,5 +1,5 @@
-import cors from "npm:@fastify/cors";
-import Fastify from "npm:fastify";
+import cors from "@fastify/cors";
+import Fastify from "fastify";
 import { range } from "../range.ts";
 
 const fastify = Fastify();

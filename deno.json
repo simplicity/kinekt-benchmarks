@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "@fastify/cors": "npm:@fastify/cors@^10.0.1",
+    "express": "npm:express@4.21.2",
+    "cors": "npm:cors@2.8.5",
+    "fastify": "npm:fastify@^5.2.0",
+    "kinekt": "npm:kinekt@^0.0.20",
+    "zod": "npm:zod@^3.24.1"
+  }
+}

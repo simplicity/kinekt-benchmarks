@@ -1,4 +1,3 @@
-import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import {
   cors,
   createNotFoundEndpoint,
@@ -10,8 +9,8 @@ import {
   handleValidationErrors,
   serialize,
   ValidationErrors,
-} from "npm:kinekt";
-import { z } from "npm:zod";
+} from "kinekt";
+import { z } from "zod";
 import { range } from "../range.ts";
 
 const defaultValidationErrorHandler = (validationErrors: ValidationErrors) => ({

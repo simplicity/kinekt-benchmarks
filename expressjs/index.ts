@@ -1,5 +1,5 @@
-import cors from "npm:cors";
-import express from "npm:express";
+import cors from "cors";
+import express from "express";
 import { range } from "../range.ts";
 
 const app = express();
