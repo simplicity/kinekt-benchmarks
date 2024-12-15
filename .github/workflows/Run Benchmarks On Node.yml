@@ -1,0 +1,36 @@
+name: Run Benchmarks On Node
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  benchmarks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Run servers
+        run: |
+          npx ts-node expressjs/index.ts & \
+          npx ts-node fastify/index.ts & \
+          npx ts-node kinekt/index.ts & \
+          npx ts-node oak/index.ts &
+
+      - name: Run benchmarks
+        run: npx ts-node benchmarks.ts
